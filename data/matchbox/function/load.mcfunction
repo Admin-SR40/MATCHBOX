@@ -38,12 +38,17 @@ scoreboard objectives add MATCHBOX.TemporaryValue dummy
 scoreboard objectives add MATCHBOX.Calculation dummy
 scoreboard objectives add MATCHBOX.Coordinate.X dummy
 scoreboard objectives add MATCHBOX.Coordinate.Z dummy
+scoreboard objectives add MATCHBOX.SelectedSlot dummy
+scoreboard objectives add MATCHBOX.VoteCount dummy
+scoreboard objectives add MATCHBOX.PlayerNumber dummy
+scoreboard objectives add MATCHBOX.VoteOverflow dummy
 
 # 设定静态值
 
 scoreboard players set $MATCHBOX.Calculation.900 MATCHBOX.Calculation 900
 scoreboard players set $MATCHBOX.Calculation.3600 MATCHBOX.Calculation 3600
 scoreboard players set $MATCHBOX.Calculation.-1 MATCHBOX.Calculation -1
+scoreboard players set $MATCHBOX.AbandonedVotes MATCHBOX.VoteCount 0
 
 # 设定队伍
 

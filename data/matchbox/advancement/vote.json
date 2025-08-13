@@ -7,7 +7,7 @@
                 "item": {
                     "predicates": {
                         "custom_data": {
-                            "MATCHBOX":"mark"
+                            "MATCHBOX":"vote"
                         }
                     }
                 }
@@ -15,6 +15,6 @@
         }
     },
     "rewards": {
-        "function": "matchbox:player/mark"
+        "function": "matchbox:player/vote"
     }
 }

@@ -21,5 +21,3 @@ tag @a remove MATCHBOX.SwapTarget
 
 tp @e[tag=MATCHBOX.SwapEntity] 0 -100 0
 kill @e[tag=MATCHBOX.SwapEntity]
-
-schedule function matchbox:player/swap_clear 4t

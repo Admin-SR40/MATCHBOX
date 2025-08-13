@@ -13,3 +13,6 @@ item replace entity @a hotbar.8 with crossbow[unbreakable={},!attribute_modifier
 give @a spectral_arrow[tooltip_display={hide_tooltip:true},item_model="air",item_name=""]
 
 item replace entity @a inventory.13 with barrier[item_name={"text":"请不要在游戏内打开背包!","color":"red"},lore=[{"text":"在游戏内操作物品栏可能会","color":"gray",italic:false},{"text":"预想不到的错误!","color":"gray",italic:false}]]
+
+schedule function matchbox:phases/enter_intro 598s
+schedule function matchbox:phases/discuss 600s

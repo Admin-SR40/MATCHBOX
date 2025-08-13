@@ -1,0 +1,1 @@
+execute as @a[tag=MATCHBOX.VoteTag] run function matchbox:player/death

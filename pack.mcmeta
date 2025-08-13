@@ -1,6 +1,6 @@
 {
-  "pack": {
-    "description": "The MATCHBOX datapack.",
-    "pack_format": 81
-  }
+    "pack":{
+        "pack_format": 81,
+        "description": "§bA §cwerewolf-like §bminigame.\n§bMC §e1.21.7+ §bis required.    "
+    }
 }
