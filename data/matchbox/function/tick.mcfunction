@@ -19,3 +19,6 @@ execute as @e[type=spectral_arrow] if data entity @s {inGround:true} run kill @s
 
 # 肇事者传送检测
 execute as @a at @s if data entity @s {equipment:{offhand:{}}} run function matchbox:player/swap
+
+# 准备按钮
+function matchbox:game/lobby

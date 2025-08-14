@@ -1,0 +1,20 @@
+{
+    "parent": "matchbox:trigger",
+    "criteria": {
+        "trigger":{
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "custom_data": {
+                            "MATCHBOX":"join"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "matchbox:player/ready"
+    }
+}
