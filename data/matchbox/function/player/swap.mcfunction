@@ -3,6 +3,8 @@ item replace entity @s weapon.offhand with air
 
 execute as @s if entity @s[tag=!MATCHBOX.Spark] run return fail
 
+execute as @s if score @s MATCHBOX.SwapCooldown matches 1.. run return fail
+
 tag @r[team=!MATCHBOX.Lobby,team=!MATCHBOX.Spectator,tag=!MATCHBOX.Spark] add MATCHBOX.SwapTarget
 
 effect give @a[tag=MATCHBOX.SwapTarget] invisibility 1 0 true
@@ -21,3 +23,5 @@ tag @a remove MATCHBOX.SwapTarget
 
 tp @e[tag=MATCHBOX.SwapEntity] 0 -100 0
 kill @e[tag=MATCHBOX.SwapEntity]
+
+scoreboard players set @s MATCHBOX.SwapCooldown 2400

@@ -41,8 +41,11 @@ scoreboard objectives add MATCHBOX.Coordinate.Z dummy
 scoreboard objectives add MATCHBOX.SelectedSlot dummy
 scoreboard objectives add MATCHBOX.VoteCount dummy
 scoreboard objectives add MATCHBOX.PlayerNumber dummy
+scoreboard objectives add MATCHBOX.PlayerCount dummy
 scoreboard objectives add MATCHBOX.VoteOverflow dummy
 scoreboard objectives add MATCHBOX.GameStatus dummy
+scoreboard objectives add MATCHBOX.SpawnLocation dummy
+scoreboard objectives add MATCHBOX.SwapCooldown dummy
 
 # 设定静态值
 

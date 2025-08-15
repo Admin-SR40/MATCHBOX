@@ -1,5 +1,9 @@
 clear @a
 
+function matchbox:game/spread
+
+scoreboard players set @a[tag=MATCHBOX.Spark] MATCHBOX.SwapCooldown 2400
+
 item replace entity @a hotbar.0 with iron_axe[unbreakable={},!attribute_modifiers,tooltip_display={hide_tooltip:true},can_break={blocks:"minecraft:oak_sign"}]
 item replace entity @a hotbar.1 with oak_sign[tooltip_display={hide_tooltip:true},can_place_on={blocks:"quartz_block"}] 16
 item replace entity @a hotbar.2 with wooden_sword[unbreakable={},!attribute_modifiers,tooltip_display={hide_tooltip:true},custom_data={MATCHBOX:"mark"},consumable={consume_seconds:2147483647},item_model="air",item_name=""]

@@ -11,3 +11,7 @@ scoreboard players set @r[tag=!MATCHBOX.Spectator,team=!MATCHBOX.Lobby,team=!MAT
 execute as @a[scores={MATCHBOX.PlayerNumber=1..}] run tellraw @s [{"text":"本局你将作为 ","color":"yellow"},{"score":{"objective":"MATCHBOX.PlayerNumber","name":"@s"},"color":"green"},{"text":" 号玩家进行游戏!","color":"yellow"}]
 
 tag @a[scores={MATCHBOX.PlayerNumber=1..}] add MATCHBOX.InGame
+
+scoreboard players set $MATCHBOX.GameStarted MATCHBOX.GameStatus 1
+
+function matchbox:game/spread

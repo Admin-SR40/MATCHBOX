@@ -22,3 +22,16 @@ execute as @a at @s if data entity @s {equipment:{offhand:{}}} run function matc
 
 # 准备按钮
 function matchbox:game/lobby
+
+# 玩家数量获取
+tag @a[tag=MATCHBOX.Innocent] add MATCHBOX.Good
+tag @a[tag=MATCHBOX.Medic] add MATCHBOX.Good
+execute store result score $MATCHBOX.SparkCount MATCHBOX.PlayerCount run execute if entity @a[tag=MATCHBOX.Spark,tag=!MATCHBOX.DeadPlayer,tag=!MATCHBOX.Spectator]
+execute store result score $MATCHBOX.InnocentCount MATCHBOX.PlayerCount run execute if entity @a[tag=MATCHBOX.Good,tag=!MATCHBOX.DeadPlayer,tag=!MATCHBOX.Spectator]
+
+# 胜利判断
+execute if score $MATCHBOX.SparkCount MATCHBOX.PlayerCount matches 0 if score $MATCHBOX.GameStarted MATCHBOX.GameStatus matches 1 run function matchbox:game/innocent_win
+execute if score $MATCHBOX.SparkCount MATCHBOX.PlayerCount matches 1 if score $MATCHBOX.InnocentCount MATCHBOX.PlayerCount matches 1 if score $MATCHBOX.GameStarted MATCHBOX.GameStatus matches 1 run function matchbox:game/spark_win
+
+# 技能CD
+scoreboard players remove @a[scores={MATCHBOX.SwapCooldown=1..}] MATCHBOX.SwapCooldown 1
